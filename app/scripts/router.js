@@ -8,12 +8,6 @@ import RegisterPage from './components/RegisterPage';
 import Search from './components/search';
 
 
-$(document).ajaxSend((e,xhr,opts)=>{
-  console.log('interception!');
-  xhr.setRequestHeader('application-type','REST');
-  xhr.setRequestHeader('application-id', config.appId);
-  xhr.setRequestHeader('secret-key',config.secret);
-});
 export default(
 
 <Router history= {hashHistory}>
