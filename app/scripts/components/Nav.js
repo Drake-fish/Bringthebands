@@ -1,30 +1,38 @@
 import React from 'react';
 import {Link} from 'react-router';
+import store from '../store';
 
 
+export default React.createClass({
 
-const Nav=React.createClass({
   render(){
-    let Nav=(
-    <ul>
-      <Link to="sign-in">Sign-in</Link>
-      <Link to="/">Login</Link>
-    </ul>
-    );
-    if(window.localStorage.name){
-      Nav=(
-      <ul>
-        <Link to="search">Search</Link>
-        <Link to="votes">Votes</Link>
-      </ul>
-      );
-    }
-    return(
-  <nav className="nav">
-      {Nav}
-  </nav>
-);
-  }
-});
+    let nav;
 
-export default Nav;
+  if(!window.localStorage.getItem('user-token')){
+    nav=(
+      <nav className="logged-out-nav">
+        <Link to= "login">Log In</Link>
+        <Link to= "register">Register</Link>
+      </nav>
+    )
+  }else{
+    nav=(
+      <nav className="logged-in-nav">
+        <Link to="search" className="search-nav">SEARCH BANDS</Link>
+        <Link to="bands" className="voted-bands-nav">SEE WHOS COMING</Link>
+        <input type="button" className="logout-button" onClick={this.handleLogout} value="LOGOUT"/>
+      </nav>
+    )
+  }
+  return(
+    <div>
+      {nav}
+      {this.props.children}
+    </div>
+  );
+},
+handleLogout(e){
+  e.preventDefault();
+  store.session.userLogout();
+}
+});

@@ -18,7 +18,7 @@ export default React .createClass({
   render(){
     return(
       <div className="register">
-        <Nav/>
+        <Nav state={store.session}/>
         <form>
             <input className="username" type="text" placeholder="UserName"/>
             <input className="email" type="email"  placeholder="Email"/>

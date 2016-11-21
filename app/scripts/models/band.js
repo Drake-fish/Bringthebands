@@ -4,5 +4,8 @@ import _ from 'underscore';
 
 
 export default Backbone.Model.extend({
-idAttribute:'id'
+idAttribute:'id',
+defaults:{
+  votes:0
+}
 });

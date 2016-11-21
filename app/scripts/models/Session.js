@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import {hashHistory} from 'react-router';
+import config from '../config';
+
 
 export default Backbone.Model.extend({
   initialize(){
@@ -9,8 +11,12 @@ export default Backbone.Model.extend({
 
     }
   },
+  idAttribute:'objectId',
   defaults:{
-    'user-token':''
+    userName:'',
+    email:'',
+    'user-token':'',
+    votedArtists:[]
   },
 
   validatePassword(password,confirmPassword){
@@ -20,11 +26,6 @@ export default Backbone.Model.extend({
   userRegister(name,email,password){
     $.ajax({
       type:'POST',
-      header:{
-      'application-type':'REST',
-      'application-id': config.appId,
-      'secret-key':config.secret
-    },
       url:'https://api.backendless.com/v1/users/register',
       contentType:'application/json',
       data:JSON.stringify({
@@ -40,11 +41,6 @@ export default Backbone.Model.extend({
   userLogin(email,password){
     $.ajax({
       type:'POST',
-      header:{
-      'application-type':'REST',
-      'application-id': config.appId,
-      'secret-key':config.secret
-    },
       url:'https://api.backendless.com/v1/users/login',
       contentType:'application/json',
       data:JSON.stringify({
@@ -59,19 +55,15 @@ export default Backbone.Model.extend({
       }
     });
   },
-  userLogout(){
+  userLogout(userToken){
     $.ajax({
-      header:{
-      'application-type':'REST',
-      'application-id': config.appId,
-      'secret-key':config.secret
-    },
+      contentType:'application/json',
       url:'https://api.backendless.com/v1/users/logout',
       success:()=>{
         this.clear();
         window.localStorage.clear();
         hashHistory.push('/');
       }
-    })
+    });
   }
 });

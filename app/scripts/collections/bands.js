@@ -1,7 +1,7 @@
 import Backbone from 'backbone';
 import Band from '../models/band';
 import $ from 'jquery';
-
+import {hashHistory} from 'react-router';
 import config from '../config';
 
 
@@ -15,22 +15,20 @@ export default Backbone.Collection.extend({
         type:'artist'
       },
       success:(response)=>{
-        // console.log('this reference', this);
-        // console.log('search response', response);
+        this.reset();
         this.add(response);
       }
     });
   },
-  addVotes({name,picture,votes}){
-    this.create(
-      {name, picture, votes},
-      {headers: {
-        'application-id':config.appId,
-        'secret-key':config.secret,
-        'Content-Type':'application/json',
-        'application-type': 'REST'
-      },
-      url:'https://api.backendless.com/v1/data/bands'
-    });
-  }
+addVotes({name,photo,votes}){
+  $.ajax({
+    type:'POST',
+    url:'https://api.backendless.com/v1/data/bands',
+    contentType: 'application/json',
+    data:JSON.stringify({name,photo,votes}),
+    success: ()=>{
+      console.log('voted');
+    }
+  });
+}
 });
