@@ -1,0 +1,9 @@
+
+.add-vote{
+  font-size:1rem;
+  border:1px solid white;
+  transition:background .2s ease-in-out;
+&:hover{
+  background:green;
+}
+}

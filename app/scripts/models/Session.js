@@ -51,7 +51,7 @@ export default Backbone.Model.extend({
         this.set(response);
         window.localStorage.setItem('user-token',response['user-token']);
         window.localStorage.setItem('name',response['name']);
-        hashHistory.push('/search');
+        hashHistory.push('bands');
       }
     });
   },

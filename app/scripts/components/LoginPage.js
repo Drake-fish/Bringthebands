@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 import Nav from './Nav';
 import store from '../store';
@@ -18,19 +19,20 @@ export default React .createClass({
   render(){
     return(
       <div className="login">
-      <Nav/>
+      <h3> Welcome! Sign in and promote your favorite band!</h3>
       <form>
-          <input className="email" type="email"  placeholder="Email"/>
-          <input className="password" type="password"  placeholder="password"/>
-          <input type="submit" onClick={this.handleSubmit} value="LOGIN"/>
+          <input ref="email" className="email" type="email"  placeholder="Email"/>
+          <input ref="password" className="password" type="password"  placeholder="password"/>
+          <input className="login-button" type="submit" onClick={this.handleSubmit} value="LOGIN"/>
       </form>
+      <span> Dont have an account?<Link className="register-link" to="register">Create an account</Link></span>
       </div>
     )
   },
   handleSubmit(e){
     e.preventDefault();
-    const email=document.querySelector('.email').value;
-    const password=document.querySelector('.password').value;
+    const email=this.refs.email.value;
+    const password=this.refs.password.value;
     store.session.userLogin(email,password);
   }
 });

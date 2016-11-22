@@ -1,0 +1,70 @@
+.search-bar{
+  position:fixed;
+  width:29rem;
+  top:2rem;
+}
+.search{
+  background: rgba(237, 237, 237,1);
+  color:black;
+    border-radius: 10px;
+    padding: 3px;
+    position:relative;
+    outline: none;
+    text-indent:10px;
+}
+.fa-search{
+  position:absolute;
+  color:black;
+  top:7%;
+  left:65%;
+}
+.submit-button{
+  display:none;
+}
+li{
+  list-style:none;
+}
+.empty-Search{
+  text-align:center;
+}
+
+img{
+  width: 75%;
+display: block;
+margin: 0 auto;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+.searchList{
+  padding-left:0;
+}
+.search-item{
+  display:block;
+  margin:0 auto;
+  background:rgba(237, 237, 237,.5);
+  border-radius:22px;
+  margin-bottom:1rem;
+}
+.search-header{
+  height:17rem;
+  width:100%;
+  background:url('../assets/images/heroSearch.jpeg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  border:1px solid white;
+  border-radius:20px;
+}
+.band-name{
+  text-align:left;
+  margin-left:4rem;
+  display:inline-block;
+}
+.vote-button{
+  display:inline-block;
+  margin-left:12rem;
+  transition: color 0.3s ease;
+  cursor:pointer;
+  &:hover{
+    color:#33FF66;
+  }
+}

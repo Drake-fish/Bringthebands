@@ -13,7 +13,7 @@ export default React.createClass({
     });
     return(
       <ul>
-      {bands}
+        {bands}
       </ul>
     );
   }

@@ -1,7 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router';
 
-import Nav from './Nav';
+
 import store from '../store';
+import Header from './header';
 
 
 export default React .createClass({
@@ -18,23 +20,24 @@ export default React .createClass({
   render(){
     return(
       <div className="register">
-        <Nav state={store.session}/>
+      <h3 className="register-header">Create a Bring the bands account</h3>
         <form>
-            <input className="username" type="text" placeholder="UserName"/>
-            <input className="email" type="email"  placeholder="Email"/>
-            <input className="password" type="password"  placeholder="password"/>
-            <input className="confirmPassword" type="password"  placeholder="Confirm Password"/>
-            <input type="submit" onClick={this.handleSubmit} value="LOGIN"/>
+            <input ref="username" className="username" type="text" placeholder="UserName"/>
+            <input ref="email" className="email" type="email"  placeholder="Email"/>
+            <input ref="password" className="password" type="password"  placeholder="password"/>
+            <input ref="confirmPassword" className="confirmPassword" type="password"  placeholder="Confirm Password"/>
+            <input className="register-button" type="submit" onClick={this.handleSubmit} value="LOGIN"/>
         </form>
+        <span> Already have an account? <Link className="register-link" to="/login">Login</Link></span>
       </div>
     )
   },
   handleSubmit(e){
     e.preventDefault();
-    const userName=document.querySelector('.username').value;
-    const email=document.querySelector('.email').value;
-    const password=document.querySelector('.password').value;
-    const confirmPassword=document.querySelector('.confirmPassword').value;
+    const userName=this.refs.username.value;
+    const email=this.refs.email.value;
+    const password=this.refs.password.value;
+    const confirmPassword=this.refs.confirmPassword.value;
     if(store.session.validatePassword(password,confirmPassword)){
       store.session.userRegister(userName,email,password);
     }else{

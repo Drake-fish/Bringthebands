@@ -1,14 +1,20 @@
 import React from 'react';
 
-const App=React.createCLass({
-  render:function(){
+
+
+import Nav from '../Nav';
+import VotesContainer from '../containers/VotesContainer';
+import Header from '../header';
+export default React.createClass({
+
+
+  render(){
     return(
       <div id="app">
-        {this.props.children}
+          <Header/>
+          <Nav/>
+            {this.props.children}
       </div>
     );
   }
 });
-
-
-export default App;

@@ -7,7 +7,7 @@ export default React.createClass({
 
     let bands;
     if(this.props.bands.length<1){
-    bands= <li className="empty-Search">No Bands found</li>;
+    bands= <li className="empty-Search">Search For your favorite bands</li>;
     }else{
       bands=this.props.bands.map((band,i,arr)=>{
         return <SearchItem key={band.id} band={band}/>;
