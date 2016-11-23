@@ -1,122 +1,139 @@
-.search-bar{
-  position:fixed;
-  width:29rem;
-  top:2rem;
+.search-bar {
+    position: fixed;
+    width: 29rem;
+    top: 2rem;
 }
-.search{
-  background: rgba(237, 237, 237,1);
-  color:black;
+
+.search {
+    background: rgba(237, 237, 237,1);
+    color: black;
     border-radius: 10px;
     padding: 3px;
-    position:relative;
+    position: relative;
     outline: none;
-    text-indent:10px;
-}
-.fa-search{
-  position:absolute;
-  color:black;
-  top:7%;
-  left:65%;
-}
-.submit-button{
-  display:none;
-}
-li{
-  list-style:none;
-}
-.empty-Search{
-  text-align:center;
+    text-indent: 10px;
 }
 
-img{
-  width: 75%;
-display: block;
-margin: 0 auto;
-padding-top: 1rem;
-padding-bottom: 1rem;
+.fa-search {
+    position: absolute;
+    color: black;
+    top: 7%;
+    left: 65%;
 }
-.searchList{
-  padding-left:0;
+
+.submit-button {
+    display: none;
 }
-.search-item{
-  display:block;
-  margin:0 auto;
-  background:rgba(237, 237, 237,.5);
-  border-radius:22px;
-  margin-bottom:1rem;
+
+li {
+    list-style: none;
 }
-.search-header{
-  width:100%;
-  background:url('../assets/images/heroSearch.jpeg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  border:1px solid white;
-  border-radius:20px;
+
+.empty-Search {
+    text-align: center;
 }
-.band-name{
-  text-align:left;
-  margin-left:4rem;
-  display:inline-block;
+
+img {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
-.vote-button{
-  display:inline-block;
-  margin-left:12rem;
-  transition: color 0.3s ease;
-  cursor:pointer;
-  &:hover{
-    color:#33FF66;
-  }
+
+.searchList {
+    padding-left: 0;
 }
-.voted-bands-container{
-  h2{
-    margin-top:7rem;
-  }
+
+.search-item {
+    display: block;
+    margin: 0 auto;
+    background: rgba(237, 237, 237,.5);
+    border-radius: 22px;
+    margin-bottom: 1rem;
 }
-@media (min-width:500px){
-    #search{
-      width:20rem;
-      margin-left:6rem;
+
+.search-header {
+    width: 100%;
+    background: url('../assets/images/heroSearch.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.band-name {
+    text-align: left;
+    margin-left: 4rem;
+    display: inline-block;
+}
+
+.vote-button {
+    display: inline-block;
+    margin-left: 12rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: #33FF66;
     }
-    .fa-search{
-      left:25rem;
-      top:.4rem;
+}
+
+.voted-bands-container {
+    h2 {
+        margin-top: 7rem;
     }
-    #search-item{
-      display: inline-block;
-      width: 43%;
-      margin-right: 2rem;
-      vertical-align: top;
-      margin-left: 1rem;
-      img{
-        width:20rem;
-        height:14rem;
-      }
+}
+@media (min-width:500px) {
+    #search {
+        width: 20rem;
+        margin-left: 6rem;
     }
 
+    .fa-search {
+        left: 25rem;
+        top: 0.4rem;
+    }
+
+    #search-item {
+        display: inline-block;
+        width: 43%;
+        margin-right: 2rem;
+        vertical-align: top;
+        margin-left: 1rem;
+
+        img {
+            width: 20rem;
+            height: 14rem;
+        }
+    }
 }
-@media (min-width:700px){
-  .search-header{
-    background-position-y:-3rem;
-  }
+@media (min-width:700px) {
+    .search-header {
+        background-position-y: -3rem;
+    }
 }
-@media (min-width:930px){
-  #search{
-    width:25rem;
-    margin-left:6rem;
-  }
-  .fa-search{
-    left:27rem;
-    top:.4rem;
-  }
-  #search-item{
-    width:29%;
-  }
-  .search-header{
-    background-position-y:-9rem;
-  }
+@media (min-width:930px) {
+    #search {
+        width: 25rem;
+        margin-left: 6rem;
+    }
+
+    .fa-search {
+        left: 27rem;
+        top: 0.4rem;
+    }
+
+    #search-item {
+        width: 29%;
+    }
+
+    .search-header {
+        background-position-y: -9rem;
+    }
 }
-@media (min-width:1000px){
-  .search-header{
-    background-position-y:-14rem;
-  }
+@media (min-width:1000px) {
+    .search-header {
+        background-position-y: -14rem;
+    }
 }

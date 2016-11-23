@@ -20,15 +20,5 @@ export default Backbone.Collection.extend({
       }
     });
   },
-addVotes({name,photo,votes}){
-  $.ajax({
-    type:'POST',
-    url:'https://api.backendless.com/v1/data/bands',
-    contentType: 'application/json',
-    data:JSON.stringify({name,photo,votes}),
-    success: ()=>{
-      console.log('voted');
-    }
-  });
-}
+
 });
