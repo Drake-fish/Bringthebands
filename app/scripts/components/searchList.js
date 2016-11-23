@@ -16,13 +16,13 @@ export default React.createClass({
 
 
     return(
-      <div className="search-results">
+    <div className="search-results">
         <h3>Search Results</h3>
-        <ul className="searchList">
-          {bands}
-        </ul>
+      <ul className="searchList">
+        {bands}
+      </ul>
 
-      </div>
+    </div>
     );
   }
 });

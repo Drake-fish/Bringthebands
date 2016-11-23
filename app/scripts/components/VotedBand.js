@@ -12,12 +12,12 @@ export default React.createClass({
       );
     }
     return(
-      <li>
+    <li>
         <img src={this.props.band.photo}/>
         <span>{this.props.band.name}</span>
         <span>Votes:{this.props.band.votes}</span>
-          {votebutton}
-      </li>
+      {votebutton}
+    </li>
     );
   },
   handleClick(){

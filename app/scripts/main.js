@@ -13,10 +13,12 @@ $(document).ajaxSend((evt,xhr,opts)=>{
     xhr.setRequestHeader('application-id',config.appId);
     xhr.setRequestHeader('secret-key',config.secret);
     xhr.setRequestHeader('application-type','REST');
-    if(window.localStorage.getItem('user-token')){
+  if(window.localStorage.getItem('user-token')){
     xhr.setRequestHeader('user-token',window.localStorage.getItem('user-token'));
     }
   }
 });
-
+//query requests in data.
+//one time auth request to get access token and store it in session to send when ajax request is sent off
+//
 ReactDom.render(router,container);
