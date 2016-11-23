@@ -68,3 +68,38 @@ padding-bottom: 1rem;
     color:#33FF66;
   }
 }
+@media (min-width:500px){
+    #search{
+      width:20rem;
+      margin-left:6rem;
+    }
+    .fa-search{
+      left:25rem;
+      top:.4rem;
+    }
+    #search-item{
+      display: inline-block;
+      width: 43%;
+      margin-right: 2rem;
+      vertical-align: top;
+      margin-left: 1rem;
+      img{
+        width:20rem;
+        height:14rem;
+      }
+    }
+
+}
+@media (min-width:930px){
+  #search{
+    width:25rem;
+    margin-left:6rem;
+  }
+  .fa-search{
+    left:27rem;
+    top:.4rem;
+  }
+  #search-item{
+    width:29%;
+  }
+}

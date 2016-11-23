@@ -9,15 +9,15 @@ export default React.createClass({
     console.log(this.props);
     if(this.props.band.images<1){
       return(
-        <li className="search-item">
+        <li id="search-item" className="search-item">
           <img src="https://ugotalksalot.files.wordpress.com/2016/06/no-thumb.jpg"/>
           <span className="band-name">{this.props.band.name}</span>
-          <input className="vote-button" onClick={this.handleClick} type="button" value="vote"/>
+          <a className="vote-button" onClick={this.handleClick}>Vote</a>
         </li>
       );
     }else{
     return(
-      <li className="search-item">
+      <li id="search-item" className="search-item">
         <img src={this.props.band.images[0].url}/>
         <span className="band-name">{this.props.band.name}</span>
         <a className="vote-button" onClick={this.handleClick}>Vote</a>
