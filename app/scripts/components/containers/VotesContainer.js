@@ -3,7 +3,6 @@ import React from 'react';
 import store from '../../store';
 
 import VotedBandList from '../VotedBandList';
-import Header from '../header';
 import Nav from '../Nav';
 
 export default React.createClass({

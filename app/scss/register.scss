@@ -17,6 +17,34 @@ a{
 h1{
   font-size: 3rem;
 text-align: center;
+margin-top:13rem;
+}
+.home-header{
+  height:17rem;
+  width:100%;
+  background:url('../assets/images/heroHome.jpeg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  border:1px solid white;
+  border-radius:20px;
+}
+.login-header{
+  height:17rem;
+  width:100%;
+  background:url('../assets/images/heroLogin.jpeg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  border:1px solid white;
+  border-radius:20px;
+}
+.register-header{
+  height:17rem;
+  width:100%;
+  background:url('../assets/images/heroRegister.jpeg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  border:1px solid white;
+  border-radius:20px;
 }
 .loggedin{
   height:17rem;
@@ -73,6 +101,18 @@ li {
 }
 
 }
+@media(min-width:700px){
+  .login-header{
+    background-position-y:-3rem;
+  }
+  .register-header{
+    background-position-y:-3rem;
+  }
+  .home-header{
+    background-position-y:-3rem;
+  }
+
+}
 @media (min-width:800px){
   #menuToggle{
     span{
@@ -87,4 +127,16 @@ li {
     display:inline-block;
     width:30%;
   }
+}
+@media (min-width:930px){
+  .login-header{
+    background-position-y:-15rem;
+}
+.register-header{
+  background-position-y:-15rem;
+}
+.home-header{
+  background-position-y:-15rem;
+}
+
 }

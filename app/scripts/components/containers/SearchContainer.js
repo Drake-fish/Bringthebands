@@ -25,8 +25,11 @@ export default React.createClass({
 
     return(
       <div className="search-container">
+        <header className="search-header">
+          <h1>BRING THE BANDS</h1>
+        </header>
           <SearchList bands={bands}/>
-        </div>
+      </div>
     );
   }
 });

@@ -19,13 +19,16 @@ export default React .createClass({
   render(){
     return(
       <div className="login">
-      <h3> Welcome! Sign in and promote your favorite band!</h3>
-      <form>
-          <input ref="email" className="email" type="email"  placeholder="Email"/>
-          <input ref="password" className="password" type="password"  placeholder="password"/>
-          <input className="login-button" type="submit" onClick={this.handleSubmit} value="LOGIN"/>
-      </form>
-      <span> Dont have an account?<Link className="register-link" to="register">Create an account</Link></span>
+        <header className="login-header">
+          <h1>BRING THE BANDS</h1>
+        </header>
+            <h3> Welcome! Sign in and promote your favorite band!</h3>
+            <form>
+                <input ref="email" className="email" type="email"  placeholder="Email"/>
+                <input ref="password" className="password" type="password"  placeholder="password"/>
+                <input className="login-button" type="submit" onClick={this.handleSubmit} value="LOGIN"/>
+            </form>
+            <span> Dont have an account?<Link className="register-link" to="register">Create an account</Link></span>
       </div>
     )
   },
